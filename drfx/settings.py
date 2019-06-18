@@ -135,3 +135,6 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     )
 }
+
+LOGIN_URL = '/api-auth/login/'
+LOGOUT_URL = '/api-auth/logout/'
