@@ -14,7 +14,7 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 
 ## First-time setup
 
-1.  Make sure Python 3.7x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
+1.  Make sure Python 3.6x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
 2.  Clone the repo and configure the virtual environment:
 
 ```
