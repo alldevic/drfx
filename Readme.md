@@ -42,6 +42,8 @@ Login with your superuser account. Then navigate to all users. Logout. Sign up f
 - logout - http://127.0.0.1:8000/api/v1/rest-auth/logout/
 - signup - http://127.0.0.1:8000/api/v1/rest-auth/registration/
 - swagger UI - http://127.0.0.1:8000/swagger/
+- swagger.yaml file - http://127.0.0.1:8000/swagger.yaml
+- swagger.json file - http://127.0.0.1:8000/swagger.json
 - redoc UI - http://localhost:8000/redoc/
 ---
 
