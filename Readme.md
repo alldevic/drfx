@@ -8,6 +8,8 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 - Custom user model
 - Token-based auth
 - Signup/login/logout
+- [djangorestframework-jsonapi](https://github.com/django-json-api/django-rest-framework-json-api) for JSON API support
+- [django-filters](https://github.com/carltongibson/django-filter) for Django ORM-style JSON:API filter
 - [django-allauth](https://github.com/pennersr/django-allauth) for social auth
 - [drf-yasg](https://github.com/axnsan12/drf-yasg) for automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.
 - [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
@@ -45,8 +47,3 @@ Login with your superuser account. Then navigate to all users. Logout. Sign up f
 - swagger.yaml file - http://127.0.0.1:8000/swagger.yaml
 - swagger.json file - http://127.0.0.1:8000/swagger.json
 - redoc UI - http://localhost:8000/redoc/
----
-
-Want to learn more about Django REST Framework? I've written an entire book that takes a project-based approach to building web APIs with Django. The first 2 chapters are available for free online at [https://djangoforapis.com/](https://djangoforapis.com/).
-
-[![Django for APIs](https://wsvincent.com/assets/images/djangoforapis_cover_300.jpeg)](https://djangoforapis.com)
