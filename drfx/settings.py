@@ -132,7 +132,7 @@ SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 10,
     'EXCEPTION_HANDLER':
     'rest_framework_json_api.exceptions.exception_handler',
     'DEFAULT_PAGINATION_CLASS':
@@ -145,8 +145,8 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework_json_api.renderers.JSONRenderer',
 
-        # If you're performance testing, you will want to use the browseable API
-        # without forms, as the forms can generate their own queries.
+        # If you're performance testing, you will want to use the browseable
+        # API without forms, as the forms can generate their own queries.
         # If performance testing, enable:
         # 'example.utils.BrowsableAPIRendererWithoutForms',
         # Otherwise, to play around with the browseable API, enable:
@@ -176,3 +176,30 @@ REST_FRAMEWORK = {
 
 LOGIN_URL = '/api-auth/login/'
 LOGOUT_URL = '/api-auth/logout/'
+JSON_API_FORMAT_FIELD_NAMES = 'dasherize'
+JSON_API_FORMAT_TYPES = 'dasherize'
+
+SWAGGER_SETTINGS = {
+    'DEFAULT_FIELD_INSPECTORS': [
+        'yasg.inspectors.ModelSerializerInspector',
+        'yasg.inspectors.ResourceRelatedFieldInspector',
+        'yasg.inspectors.RestAuthLoginSerializerInspector',
+        'drf_yasg.inspectors.CamelCaseJSONFilter',
+        'drf_yasg.inspectors.ReferencingSerializerInspector',
+        'drf_yasg.inspectors.RelatedFieldInspector',
+        'drf_yasg.inspectors.ChoiceFieldInspector',
+        'drf_yasg.inspectors.FileFieldInspector',
+        'drf_yasg.inspectors.DictFieldInspector',
+        'drf_yasg.inspectors.HiddenFieldInspector',
+        'drf_yasg.inspectors.RecursiveFieldInspector',
+        'drf_yasg.inspectors.SerializerMethodFieldInspector',
+        'drf_yasg.inspectors.SimpleFieldInspector',
+        'drf_yasg.inspectors.StringDefaultFieldInspector',
+    ],
+    'DEFAULT_PAGINATOR_INSPECTORS': [
+        'drf_yasg.inspectors.DjangoRestResponsePagination',
+        'drf_yasg.inspectors.CoreAPICompatInspector',
+        'yasg.inspectors.DjangoRestJsonApiResponsePagination',
+    ],
+    'DEFAULT_MODEL_RENDERING': 'example'
+}
