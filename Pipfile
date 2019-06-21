@@ -13,6 +13,7 @@ django-allauth = "==0.39.0"
 drf-yasg = "*"
 djangorestframework-jsonapi = "*"
 django-filter = "*"
+djangorestframework-jwt = "*"
 
 [requires]
 python_version = "3.6"

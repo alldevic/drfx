@@ -169,8 +169,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
     )
 }
 
@@ -183,7 +184,7 @@ SWAGGER_SETTINGS = {
     'DEFAULT_FIELD_INSPECTORS': [
         'yasg.inspectors.ModelSerializerInspector',
         'yasg.inspectors.ResourceRelatedFieldInspector',
-        'yasg.inspectors.RestAuthLoginSerializerInspector',
+        'yasg.inspectors.CustomSerializerInspector',
         'drf_yasg.inspectors.CamelCaseJSONFilter',
         'drf_yasg.inspectors.ReferencingSerializerInspector',
         'drf_yasg.inspectors.RelatedFieldInspector',
@@ -203,3 +204,5 @@ SWAGGER_SETTINGS = {
     ],
     'DEFAULT_MODEL_RENDERING': 'example'
 }
+
+REST_USE_JWT = True

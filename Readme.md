@@ -12,6 +12,7 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 - [django-filters](https://github.com/carltongibson/django-filter) for Django ORM-style JSON:API filter
 - [django-allauth](https://github.com/pennersr/django-allauth) for social auth
 - [drf-yasg](https://github.com/axnsan12/drf-yasg) for automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.
+- [django-rest-framework-jwt](https://github.com/GetBlimp/django-rest-framework-jwt/) for JSON Web Token Authentication support
 - [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
 
 ## First-time setup

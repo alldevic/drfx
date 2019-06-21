@@ -2,6 +2,7 @@ from rest_framework_json_api import serializers, pagination
 from rest_framework_json_api.utils import get_related_resource_type
 from drf_yasg import openapi, inspectors, utils, errors
 import rest_auth
+import rest_framework_jwt
 
 
 class ResourceRelatedFieldInspector(inspectors.FieldInspector):
@@ -200,21 +201,42 @@ rest_auth.serializers.PasswordChangeSerializer.JSONAPIMeta = PasswordChangeJSONA
 rest_auth.registration.serializers.RegisterSerializer.JSONAPIMeta = RegisterJSONAPIMeta
 rest_auth.registration.serializers.VerifyEmailSerializer.JSONAPIMeta = VerifyEmailJSONAPIMeta
 
-restauthsrls = [rest_auth.serializers.TokenSerializer,
-                rest_auth.serializers.JWTSerializer,
-                rest_auth.serializers.UserDetailsSerializer,
-                rest_auth.serializers.LoginSerializer,
-                rest_auth.serializers.PasswordResetSerializer,
-                rest_auth.serializers.PasswordResetConfirmSerializer,
-                rest_auth.serializers.PasswordChangeSerializer,
-                rest_auth.registration.serializers.RegisterSerializer,
-                rest_auth.registration.serializers.VerifyEmailSerializer
-                ]
+
+class JWTTokenJSONAPIMeta:
+    resource_name = "jwt-token"
 
 
-class RestAuthLoginSerializerInspector(inspectors.FieldInspector):
+class JWTRefreshJSONAPIMeta:
+    resource_name = "jwt-refresh"
+
+
+class JWTVerifyJSONAPIMeta:
+    resource_name = "jwt-verify"
+
+
+rest_framework_jwt.serializers.JSONWebTokenSerializer.JSONAPIMeta = JWTTokenJSONAPIMeta
+rest_framework_jwt.serializers.RefreshJSONWebTokenSerializer.JSONAPIMeta = JWTRefreshJSONAPIMeta
+rest_framework_jwt.serializers.VerifyJSONWebTokenSerializer.JSONAPIMeta = JWTVerifyJSONAPIMeta
+
+
+customs = [rest_auth.serializers.TokenSerializer,
+           rest_auth.serializers.JWTSerializer,
+           rest_auth.serializers.UserDetailsSerializer,
+           rest_auth.serializers.LoginSerializer,
+           rest_auth.serializers.PasswordResetSerializer,
+           rest_auth.serializers.PasswordResetConfirmSerializer,
+           rest_auth.serializers.PasswordChangeSerializer,
+           rest_auth.registration.serializers.RegisterSerializer,
+           rest_auth.registration.serializers.VerifyEmailSerializer,
+           rest_framework_jwt.serializers.JSONWebTokenSerializer,
+           rest_framework_jwt.serializers.RefreshJSONWebTokenSerializer,
+           rest_framework_jwt.serializers.VerifyJSONWebTokenSerializer,
+           ]
+
+
+class CustomSerializerInspector(inspectors.FieldInspector):
     def process_result(self, result, method_name, obj, **kwargs):
-        for sr in restauthsrls:
+        for sr in customs:
             fl = isinstance(obj, sr)
             if fl:
                 break
