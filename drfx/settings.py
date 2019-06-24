@@ -127,7 +127,7 @@ SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 10,
     'EXCEPTION_HANDLER':
     'rest_framework_json_api.exceptions.exception_handler',
     'DEFAULT_PAGINATION_CLASS':
@@ -140,8 +140,8 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework_json_api.renderers.JSONRenderer',
 
-        # If you're performance testing, you will want to use the browseable API
-        # without forms, as the forms can generate their own queries.
+        # If you're performance testing, you will want to use the browseable
+        # API without forms, as the forms can generate their own queries.
         # If performance testing, enable:
         # 'example.utils.BrowsableAPIRendererWithoutForms',
         # Otherwise, to play around with the browseable API, enable:
