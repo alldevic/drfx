@@ -10,9 +10,8 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 - Signup/login/logout
 - [djangorestframework-jsonapi](https://github.com/django-json-api/django-rest-framework-json-api) for JSON API support
 - [django-filters](https://github.com/carltongibson/django-filter) for Django ORM-style JSON:API filter
-- [django-allauth](https://github.com/pennersr/django-allauth) for social auth
 - [drf-yasg](https://github.com/axnsan12/drf-yasg) for automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.
-- [django-rest-framework-jwt](https://github.com/GetBlimp/django-rest-framework-jwt/) for JSON Web Token Authentication support
+- [djoser](https://github.com/sunscrapers/djoser) for authentication support
 - [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
 
 ## First-time setup
@@ -40,10 +39,7 @@ $ pipenv shell
 
 Login with your superuser account. Then navigate to all users. Logout. Sign up for a new account and repeat the login, users, logout flow.
 
-- login - http://127.0.0.1:8000/api/v1/rest-auth/login/
-- all users - http://127.0.0.1:8000/api/v1/users
-- logout - http://127.0.0.1:8000/api/v1/rest-auth/logout/
-- signup - http://127.0.0.1:8000/api/v1/rest-auth/registration/
+- base and token djoser urls
 - swagger UI - http://127.0.0.1:8000/swagger/
 - swagger.yaml file - http://127.0.0.1:8000/swagger.yaml
 - swagger.json file - http://127.0.0.1:8000/swagger.json
