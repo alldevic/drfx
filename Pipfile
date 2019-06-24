@@ -8,11 +8,10 @@ verify_ssl = true
 [packages]
 django = "==2.2.0"
 djangorestframework = "==3.9.2"
-django-rest-auth = "==0.9.5"
-django-allauth = "==0.39.0"
 drf-yasg = "*"
 djangorestframework-jsonapi = "*"
 django-filter = "*"
+djoser = "*"
 
 [requires]
 python_version = "3.6"
