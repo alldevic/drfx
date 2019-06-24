@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ec639af12c10b0850bcdd06138f0ccdcf1b3c7c8bc5ac638f4ac25c1640bda81"
+            "sha256": "ec8e2cc90e8eeda5d479415cf6e9f3680e8022e21e6f9762ec6ceee47fd11d4b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -81,6 +81,13 @@
             "index": "pypi",
             "version": "==0.9.5"
         },
+        "django-templated-mail": {
+            "hashes": [
+                "sha256:8db807effebb42a532622e2d142dfd453dafcd0d7794c4c3332acb90656315f9",
+                "sha256:f7127e1e31d7cad4e6c4b4801d25814d4b8782627ead76f4a75b3b7650687556"
+            ],
+            "version": "==1.1.1"
+        },
         "djangorestframework": {
             "hashes": [
                 "sha256:8a435df9007c8b7d8e69a21ef06650e3c0cbe0d4b09e55dd1bd74c89a75a9fcd",
@@ -97,13 +104,13 @@
             "index": "pypi",
             "version": "==2.7.0"
         },
-        "djangorestframework-jwt": {
+        "djoser": {
             "hashes": [
-                "sha256:5efe33032f3a4518a300dc51a51c92145ad95fb6f4b272e5aa24701db67936a7",
-                "sha256:ab15dfbbe535eede8e2e53adaf52ef0cf018ee27dbfad10cbc4cbec2ab63d38c"
+                "sha256:1e310801b225ea668a035d3da90c1c9ca5b80a294235b9a25a5999fbc9ac5a96",
+                "sha256:d0ca48a05f590d77d6d292177c735a92b639f78a7060c1861d9b5317843a0685"
             ],
             "index": "pypi",
-            "version": "==1.11.0"
+            "version": "==1.7.0"
         },
         "drf-yasg": {
             "hashes": [

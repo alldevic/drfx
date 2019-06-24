@@ -1,8 +1,7 @@
 from rest_framework_json_api import serializers, pagination
 from rest_framework_json_api.utils import get_related_resource_type
 from drf_yasg import openapi, inspectors, utils, errors
-import rest_auth
-import rest_framework_jwt
+import djoser
 
 
 class ResourceRelatedFieldInspector(inspectors.FieldInspector):
@@ -155,20 +154,12 @@ class DjangoRestJsonApiResponsePagination(inspectors.PaginatorInspector):
         )
 
 
-class LoginJSONAPIMeta:
-    resource_name = "login"
+class ActivationJSONAPIMeta:
+    resource_name = "activation"
 
 
 class TokenJSONAPIMeta:
     resource_name = "token"
-
-
-class JWTJSONAPIMeta:
-    resource_name = "jwt"
-
-
-class UserDetailsJSONAPIMeta:
-    resource_name = "user-details"
 
 
 class PasswordResetJSONAPIMeta:
@@ -183,54 +174,76 @@ class PasswordChangeJSONAPIMeta:
     resource_name = "password-change"
 
 
-class RegisterJSONAPIMeta:
-    resource_name = "register"
+class PasswordResetConfirmRetypeJSONAPIMeta:
+    resource_name = "password-reset-confirm-retype"
 
 
-class VerifyEmailJSONAPIMeta:
-    resource_name = "verify-email"
+class SetPasswordRetypeJSONAPIMeta:
+    resource_name = "set-password-retype"
 
 
-rest_auth.serializers.LoginSerializer.JSONAPIMeta = LoginJSONAPIMeta
-rest_auth.serializers.TokenSerializer.JSONAPIMeta = TokenJSONAPIMeta
-rest_auth.serializers.JWTSerializer.JSONAPIMeta = JWTJSONAPIMeta
-rest_auth.serializers.UserDetailsSerializer.JSONAPIMeta = UserDetailsJSONAPIMeta
-rest_auth.serializers.PasswordResetSerializer.JSONAPIMeta = PasswordResetJSONAPIMeta
-rest_auth.serializers.PasswordResetConfirmSerializer.JSONAPIMeta = PasswordResetConfirmJSONAPIMeta
-rest_auth.serializers.PasswordChangeSerializer.JSONAPIMeta = PasswordChangeJSONAPIMeta
-rest_auth.registration.serializers.RegisterSerializer.JSONAPIMeta = RegisterJSONAPIMeta
-rest_auth.registration.serializers.VerifyEmailSerializer.JSONAPIMeta = VerifyEmailJSONAPIMeta
+class SetPasswordJSONAPIMeta:
+    resource_name = "set-password"
 
 
-class JWTTokenJSONAPIMeta:
-    resource_name = "jwt-token"
+class SetUsernameRetypeJSONAPIMeta:
+    resource_name = "set-username-retype"
 
 
-class JWTRefreshJSONAPIMeta:
-    resource_name = "jwt-refresh"
+class SetUsernameJSONAPIMeta:
+    resource_name = "set-username"
 
 
-class JWTVerifyJSONAPIMeta:
-    resource_name = "jwt-verify"
+class UserJSONAPIMeta:
+    resource_name = "user"
 
 
-rest_framework_jwt.serializers.JSONWebTokenSerializer.JSONAPIMeta = JWTTokenJSONAPIMeta
-rest_framework_jwt.serializers.RefreshJSONWebTokenSerializer.JSONAPIMeta = JWTRefreshJSONAPIMeta
-rest_framework_jwt.serializers.VerifyJSONWebTokenSerializer.JSONAPIMeta = JWTVerifyJSONAPIMeta
+class UserCreateJSONAPIMeta:
+    resource_name = "user-create"
 
 
-customs = [rest_auth.serializers.TokenSerializer,
-           rest_auth.serializers.JWTSerializer,
-           rest_auth.serializers.UserDetailsSerializer,
-           rest_auth.serializers.LoginSerializer,
-           rest_auth.serializers.PasswordResetSerializer,
-           rest_auth.serializers.PasswordResetConfirmSerializer,
-           rest_auth.serializers.PasswordChangeSerializer,
-           rest_auth.registration.serializers.RegisterSerializer,
-           rest_auth.registration.serializers.VerifyEmailSerializer,
-           rest_framework_jwt.serializers.JSONWebTokenSerializer,
-           rest_framework_jwt.serializers.RefreshJSONWebTokenSerializer,
-           rest_framework_jwt.serializers.VerifyJSONWebTokenSerializer,
+class UserDeleteJSONAPIMeta:
+    resource_name = "user-delete"
+
+
+class CurrentUserJSONAPIMeta:
+    resource_name = "current-user"
+
+
+class TokenCreateJSONAPIMeta:
+    resource_name = "token-create"
+
+
+djoser.serializers.ActivationSerializer.JSONAPIMeta = ActivationJSONAPIMeta
+djoser.serializers.PasswordResetSerializer.JSONAPIMeta = PasswordResetJSONAPIMeta
+djoser.serializers.PasswordResetConfirmSerializer.JSONAPIMeta = PasswordResetConfirmJSONAPIMeta
+djoser.serializers.PasswordResetConfirmRetypeSerializer.JSONAPIMeta = PasswordResetConfirmRetypeJSONAPIMeta
+djoser.serializers.SetPasswordSerializer.JSONAPIMeta = SetPasswordJSONAPIMeta
+djoser.serializers.SetPasswordRetypeSerializer.JSONAPIMeta = SetPasswordRetypeJSONAPIMeta
+djoser.serializers.SetUsernameSerializer.JSONAPIMeta = SetUsernameJSONAPIMeta
+djoser.serializers.SetUsernameRetypeSerializer.JSONAPIMeta = SetUsernameRetypeJSONAPIMeta
+djoser.serializers.UserCreateSerializer.JSONAPIMeta = UserCreateJSONAPIMeta
+djoser.serializers.UserDeleteSerializer.JSONAPIMeta = UserDeleteJSONAPIMeta
+djoser.serializers.UserSerializer.JSONAPIMeta = UserJSONAPIMeta
+djoser.serializers.CurrentUserSerializer.JSONAPIMeta = CurrentUserJSONAPIMeta
+djoser.serializers.TokenSerializer.JSONAPIMeta = TokenJSONAPIMeta
+djoser.serializers.TokenCreateSerializer.JSONAPIMeta = TokenCreateJSONAPIMeta
+
+
+customs = [djoser.serializers.ActivationSerializer,
+           djoser.serializers.PasswordResetSerializer,
+           djoser.serializers.PasswordResetConfirmSerializer,
+           djoser.serializers.PasswordResetConfirmRetypeSerializer,
+           djoser.serializers.SetPasswordSerializer,
+           djoser.serializers.SetPasswordRetypeSerializer,
+           djoser.serializers.SetUsernameSerializer,
+           djoser.serializers.SetUsernameRetypeSerializer,
+           djoser.serializers.UserCreateSerializer,
+           djoser.serializers.UserDeleteSerializer,
+           djoser.serializers.UserSerializer,
+           djoser.serializers.CurrentUserSerializer,
+           djoser.serializers.TokenSerializer,
+           djoser.serializers.TokenCreateSerializer,
            ]
 
 
