@@ -1,6 +1,6 @@
 # DRFx
 
-A framework for launching new Django Rest Framework projects quickly. Comes with a custom user model, login/logout/signup, social authentication via django-allauth, and more.
+A framework for launching new Django Rest Framework projects quickly. Comes with login/logout/signup, jwt support and more
 
 ## Features
 
@@ -12,6 +12,7 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 - [django-filters](https://github.com/carltongibson/django-filter) for Django ORM-style JSON:API filter
 - [drf-yasg](https://github.com/axnsan12/drf-yasg) for automated generation of real Swagger/OpenAPI 2.0 schemas from Django REST Framework code.
 - [djoser](https://github.com/sunscrapers/djoser) for authentication support
+- [django-rest-framework-simplejwt](https://github.com/davesque/django-rest-framework-simplejwt) for JWT support
 - [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
 
 ## First-time setup
@@ -20,7 +21,7 @@ A framework for launching new Django Rest Framework projects quickly. Comes with
 2.  Clone the repo and configure the virtual environment:
 
 ```
-$ git clone https://github.com/wsvincent/drfx.git
+$ git clone https://github.com/alldevic/drfx.git
 $ cd drfx
 $ pipenv install
 $ pipenv shell
