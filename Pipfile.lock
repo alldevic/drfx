@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ec8e2cc90e8eeda5d479415cf6e9f3680e8022e21e6f9762ec6ceee47fd11d4b"
+            "sha256": "4073658aa40703e7ffdd06e2ce306b3826ba8662508348d394358934bfbe5cf9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -44,13 +44,6 @@
             ],
             "version": "==0.0.4"
         },
-        "defusedxml": {
-            "hashes": [
-                "sha256:6687150770438374ab581bb7a1b327a847dd9c5749e396102de3fad4e8a3ef93",
-                "sha256:f684034d135af4c6cbb949b8a4d2ed61634515257a67299e5f940fbaa34377f5"
-            ],
-            "version": "==0.6.0"
-        },
         "django": {
             "hashes": [
                 "sha256:7c3543e4fb070d14e10926189a7fcf42ba919263b7473dceaefce34d54e8a119",
@@ -59,13 +52,6 @@
             "index": "pypi",
             "version": "==2.2"
         },
-        "django-allauth": {
-            "hashes": [
-                "sha256:cae8ab7b1e65f690f6b149663300c04bbd90dbcd2a58cb7a373baf6a69c9c8de"
-            ],
-            "index": "pypi",
-            "version": "==0.39.0"
-        },
         "django-filter": {
             "hashes": [
                 "sha256:3dafb7d2810790498895c22a1f31b2375795910680ac9c1432821cbedb1e176d",
@@ -73,13 +59,6 @@
             ],
             "index": "pypi",
             "version": "==2.1.0"
-        },
-        "django-rest-auth": {
-            "hashes": [
-                "sha256:f11e12175dafeed772f50d740d22caeab27e99a3caca24ec65e66a8d6de16571"
-            ],
-            "index": "pypi",
-            "version": "==0.9.5"
         },
         "django-templated-mail": {
             "hashes": [
@@ -98,11 +77,19 @@
         },
         "djangorestframework-jsonapi": {
             "hashes": [
-                "sha256:3f82e7b98cda9a45e5ebe2b401c9faea172483c092c3ad6a39f99e8c8d8406a9",
-                "sha256:d84af7e8d898d3db1665272e83c29e5716e697db68144ead5a7f379901d206c6"
+                "sha256:4cc55af703b9d312d0c3424201ba6cbae0d14c3c5bdf64b3f6270110379f0106",
+                "sha256:574171f1457b905dcd0c0197e91111c44f636376823b4856709a80176cc69160"
             ],
             "index": "pypi",
-            "version": "==2.7.0"
+            "version": "==2.8.0"
+        },
+        "djangorestframework-simplejwt": {
+            "hashes": [
+                "sha256:4cb1a51bf9b098b983e1326a1cfc65fb0b3c5a2aa0fa43effdbf05dd6da5e8cb",
+                "sha256:d025211806622c53020aa4f66029f1f7305e38de6439116b4a842661fc02cf36"
+            ],
+            "index": "pypi",
+            "version": "==4.3.0"
         },
         "djoser": {
             "hashes": [
@@ -179,26 +166,12 @@
             ],
             "version": "==1.1.1"
         },
-        "oauthlib": {
-            "hashes": [
-                "sha256:0ce32c5d989a1827e3f1148f98b9085ed2370fc939bf524c9c851d8714797298",
-                "sha256:3e1e14f6cde7e5475128d30e97edc3bfb4dc857cb884d8714ec161fdbb3b358e"
-            ],
-            "version": "==3.0.1"
-        },
         "pyjwt": {
             "hashes": [
                 "sha256:5c6eca3c2940464d106b99ba83b00c6add741c9becaec087fb7ccdefea71350e",
                 "sha256:8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"
             ],
             "version": "==1.7.1"
-        },
-        "python3-openid": {
-            "hashes": [
-                "sha256:0086da6b6ef3161cfe50fb1ee5cceaf2cda1700019fda03c2c5c440ca6abe4fa",
-                "sha256:628d365d687e12da12d02c6691170f4451db28d6d68d050007e4a40065868502"
-            ],
-            "version": "==3.1.0"
         },
         "pytz": {
             "hashes": [
@@ -213,13 +186,6 @@
                 "sha256:9cf5292fcd0f598c671cfc1e0d7d1a7f13bb8085e9a590f48c010551dc6c4b31"
             ],
             "version": "==2.22.0"
-        },
-        "requests-oauthlib": {
-            "hashes": [
-                "sha256:bd6533330e8748e94bf0b214775fed487d309b8b8fe823dc45641ebcd9a32f57",
-                "sha256:d3ed0c8f2e3bbc6b344fa63d6f933745ab394469da38db16bdddb461c7e25140"
-            ],
-            "version": "==1.2.0"
         },
         "ruamel.yaml": {
             "hashes": [

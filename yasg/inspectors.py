@@ -2,6 +2,7 @@ from rest_framework_json_api import serializers, pagination
 from rest_framework_json_api.utils import get_related_resource_type
 from drf_yasg import openapi, inspectors, utils, errors
 import djoser
+import rest_framework_simplejwt
 
 
 class ResourceRelatedFieldInspector(inspectors.FieldInspector):
@@ -214,6 +215,18 @@ class TokenCreateJSONAPIMeta:
     resource_name = "token-create"
 
 
+class TokenObtainJSONAPIMeta:
+    resource_name = "jwt-obtain"
+
+
+class TokenVerifyJSONAPIMeta:
+    resource_name = "jwt-verify"
+
+
+class TokenRefreshJSONAPIMeta:
+    resource_name = "jwt-refresh"
+
+
 djoser.serializers.ActivationSerializer.JSONAPIMeta = ActivationJSONAPIMeta
 djoser.serializers.PasswordResetSerializer.JSONAPIMeta = PasswordResetJSONAPIMeta
 djoser.serializers.PasswordResetConfirmSerializer.JSONAPIMeta = PasswordResetConfirmJSONAPIMeta
@@ -228,7 +241,9 @@ djoser.serializers.UserSerializer.JSONAPIMeta = UserJSONAPIMeta
 djoser.serializers.CurrentUserSerializer.JSONAPIMeta = CurrentUserJSONAPIMeta
 djoser.serializers.TokenSerializer.JSONAPIMeta = TokenJSONAPIMeta
 djoser.serializers.TokenCreateSerializer.JSONAPIMeta = TokenCreateJSONAPIMeta
-
+rest_framework_simplejwt.serializers.TokenObtainSerializer.JSONAPIMeta = TokenObtainJSONAPIMeta
+rest_framework_simplejwt.serializers.TokenVerifySerializer.JSONAPIMeta = TokenVerifyJSONAPIMeta
+rest_framework_simplejwt.serializers.TokenRefreshSerializer.JSONAPIMeta = TokenRefreshJSONAPIMeta
 
 customs = [djoser.serializers.ActivationSerializer,
            djoser.serializers.PasswordResetSerializer,
@@ -244,6 +259,9 @@ customs = [djoser.serializers.ActivationSerializer,
            djoser.serializers.CurrentUserSerializer,
            djoser.serializers.TokenSerializer,
            djoser.serializers.TokenCreateSerializer,
+           rest_framework_simplejwt.serializers.TokenObtainSerializer,
+           rest_framework_simplejwt.serializers.TokenVerifySerializer,
+           rest_framework_simplejwt.serializers.TokenRefreshSerializer,
            ]
 
 
