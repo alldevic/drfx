@@ -9,9 +9,9 @@ verify_ssl = true
 django = "==2.2.0"
 djangorestframework = "==3.9.2"
 drf-yasg = "==1.15.1"
-djangorestframework-jsonapi = ==2.8.0*"
+djangorestframework-jsonapi = "==2.8.0"
 django-filter = "==2.1.0"
-djoser = "1.7.0"
+djoser = "==1.7.0"
 djangorestframework-simplejwt = "==4.3.0"
 
 [requires]
